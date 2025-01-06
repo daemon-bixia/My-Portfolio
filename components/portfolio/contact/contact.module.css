@@ -1,0 +1,58 @@
+.grid {
+  padding: 6.25rem 2rem;
+  display: grid;
+  grid-template-columns: 18.75rem 1fr;
+  column-gap: 3.75rem;
+}
+
+.grid .description {
+  max-width: 12.625rem;
+}
+
+.grid .descriptionWrapper .description .header {
+  margin-bottom: 1rem;
+}
+
+.grid .descriptionWrapper .description .text {
+  margin-bottom: 1.5rem;
+}
+
+.grid .descriptionWrapper .underline {
+  width: 6.5625rem;
+  height: 0.0625rem;
+  background-color: var(--blue-200);
+}
+
+
+/***** Tablet *****/
+
+@media only screen and (min-width: 48rem) and (max-width: 61.9375rem) {
+  .grid {
+    grid-template-columns: 9.375rem 1fr;
+  }
+}
+
+
+/***** Mobile *****/
+
+@media only screen and (max-width: 47.9375rem) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    place-content: center;
+    row-gap: 3.75rem;
+  }
+
+  .grid .descriptionWrapper {
+    display: grid;
+    place-items: center;
+  }
+
+  .grid .descriptionWrapper .underline {
+    width: 3.125rem;
+  }
+
+  .grid .description {
+    text-align: center;
+  }
+}

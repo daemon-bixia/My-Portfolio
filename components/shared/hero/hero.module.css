@@ -1,0 +1,17 @@
+.hero {
+  padding: 3.125rem 2rem;
+  height: calc(100vh - 11.4375rem);
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  place-items: center;
+  place-content: center;
+}
+
+.hero .welcome {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero .welcome h1 {
+  margin-bottom: 1rem;
+}

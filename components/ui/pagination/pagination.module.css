@@ -1,0 +1,27 @@
+.pagination .pages {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2.375rem, min-content));
+  column-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination .pages .pageLink {
+  border: 0.0625rem solid var(--border);
+  width: 2.375rem;
+  height: 2.375rem;
+}
+
+.pagination .pages .pageLink:hover {
+  background-color: var(--gray-50);
+  border: 0.0625rem solid var(--border);
+}
+
+.pagination .pages .pageLink:disabled {
+  border: 0.0625rem solid var(--gray-600);
+  background-color: var(--gray-600);
+  color: var(--white);
+  cursor: default;
+}

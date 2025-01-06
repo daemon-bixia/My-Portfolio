@@ -1,0 +1,36 @@
+.snackbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  min-width: 21.875rem;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  justify-content: space-between;
+}
+
+.snackbar.success {
+  background-color: var(--green-100);
+  color: var(--green-500);
+}
+
+.snackbar.danger {
+  background-color: var(--red-100);
+  color: var(--red-500);
+}
+
+.snackbar .icon svg {
+  width: 1rem;
+}
+
+
+/***** Mobile *****/
+
+@media only screen and (max-width: 47.9375rem) {
+  .snackbar {
+    min-width: 15.625rem;
+  }
+}
