@@ -10,6 +10,7 @@
   .sectionHeader {
     position: relative;
     max-width: 36.3125rem;
+    text-align: center;
 
     .sparkles {
       position: absolute;
@@ -17,14 +18,7 @@
       top: -20px;
     }
 
-    .title {
-      text-align: center;
-      line-height: 160%;
-    }
-
     .description {
-      text-align: center;
-      line-height: 160%;
       color: var(--gray-text);
     }
   }

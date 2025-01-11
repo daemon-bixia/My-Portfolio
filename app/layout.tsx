@@ -1,7 +1,5 @@
-import footerData from "@/data/footer";
-
-import Footer from "@/components/portfolio/footer/footer";
-import Navbar from "@/components/portfolio/navbar/navbar";
+import Footer from "@/components/layout/footer/footer";
+import Navbar from "@/components/layout/navbar/navbar";
 
 import "./globals.css";
 
@@ -38,7 +36,7 @@ const RootLayout = ({
         </main>
 
         {/* Footer  */}
-        <Footer data={footerData} />
+        <Footer />
       </body>
     </html>
   )

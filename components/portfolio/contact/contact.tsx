@@ -1,8 +1,11 @@
 'use client'
 
 import ContactForm from '@/components/portfolio/contact/contact-form/contact-form';
-import FadeOnScroll from '@/components/transitions/fade-on-scroll/fade-on-scroll';
 import Typography from '@/components/ui/typography/typography';
+import SocialLinks from '@/components/portfolio/socials/social-links';
+import Image from 'next/image';
+
+import Plane from '@/public/vectors/decorations/plane.svg';
 
 import styles from './contact.module.css';
 
@@ -11,20 +14,18 @@ import styles from './contact.module.css';
 
 export const Contact = () => {
   return (
-    <FadeOnScroll>
-      <section id='contact' className={styles.contact}>
-        <div className={styles.grid}>
-          <div className={styles.descriptionWrapper}>
-            <div className={styles.description}>
-              <Typography className={styles.header} variant='heading-4'>Contact Me</Typography>
-              <Typography className={styles.text} variant='body-3'>Send me an email let&apos;s start working together, you can also find all my links in the footer of this page.</Typography>
-            </div>
-            <div className={styles.underline}></div>
-          </div>
-          <ContactForm />
-        </div>
-      </section>
-    </FadeOnScroll>
+    <section id='contact' className={styles.contact}>
+      <header className={styles.sectionHeader}>
+        <Image className={styles.plane} src={Plane} alt="an illustration of a paper plane flying" />
+        <Typography className={styles.title} variant='display-1'><span className="colorful-text">Let&apos;s Build Together</span></Typography>
+        <Typography className={styles.description} variant='body-2'>I&apos;d love to hear from you! Whether you’re interested in collaborating, have questions about my work, or want to discuss new opportunities, feel free to reach out.</Typography>
+      </header>
+
+      <ContactForm />
+
+      {/* Social links */}
+      <SocialLinks className={styles.socialLinks} />
+    </section>
   );
 };
 

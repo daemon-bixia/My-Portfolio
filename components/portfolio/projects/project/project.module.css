@@ -3,6 +3,7 @@
   border: 1px solid var(--border);
   border-radius: 32px;
   overflow: hidden;
+  min-height: 50px;
 
   .thumbnail {
     width: 100%;

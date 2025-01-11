@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Button from "@/components/ui/button/button";
 import Snackbar from "@/components/ui/snackbar/snackbar";
 import TextInput from "@/components/ui/text-input/text-input";
-import IonIcon from "@reacticons/ionicons";
 
 import styles from "./contact-form.module.css";
 
@@ -60,14 +59,12 @@ const ContactForm = () => {
   return (
     <>
       <form className={styles.contactForm} onSubmit={handleFormSubmit}>
-        <TextInput id="name" label="Name" placeholder="Your name." required value={name} onChange={handleNameChange} />
-        <TextInput id="email_address" label="Email Address" placeholder="Your email address." required value={email} onChange={handleEmailChange} />
-        <TextInput id="message" label="Message" placeholder="The content of you message." multiline required value={message} onChange={handleMessageChange} />
-        <div className={styles.sendButtonWrapper}>
-          <Button className={styles.sendButton} type="submit" variant="outlined" endAdornment={<IonIcon name="send-outline" className={styles.icon} />}>
-            Send Email
-          </Button>
-        </div>
+        <TextInput id="name" label="Full Name" placeholder="What’s your name?" required value={name} onChange={handleNameChange} />
+        <TextInput id="email_address" label="Email Address" placeholder="I'll use this to get back to you" required value={email} onChange={handleEmailChange} />
+        <TextInput id="message" label="Message" placeholder="Type the content of you message here" multiline required value={message} onChange={handleMessageChange} />
+        <Button className={styles.sendButton} type="submit" variant="contained" color="gray">
+          Send Message
+        </Button>
       </form>
 
       {

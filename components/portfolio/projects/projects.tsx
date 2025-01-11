@@ -1,8 +1,7 @@
 "use client"
 
-import React, { useState } from "react";
+import React from "react";
 
-//import FadeOnScroll from "@/components/transitions/fade-on-scroll/fade-on-scroll";
 import Typography from "@/components/ui/typography/typography";
 import Project from "@/components/portfolio/projects/project/project";
 import IonIcon from "@reacticons/ionicons";
@@ -18,7 +17,7 @@ import Home from "@/public/images/designs/lawyer/screenshots/home.png";
 import NeosThumbnail from "@/public/images/designs/neos/thumbnail.png";
 import Landing from "@/public/images/designs/neos/screenshots/landing.png";
 import AvianTemplateThumbnail from "@/public/images/projects/avian/thumbnail.png";
-import BoltThumbnail from "@/public/images/projects/bolt/thumbnail.png";
+import BoltThumbnail from "@/public/images/projects/bolt/thumbnail.jpg";
 import ThoughtlessThumbnail from "@/public/images/projects/thoughtless/thumbnail.png";
 import LeftMesh from "@/public/images/gradients/left-mesh.png"
 import RightMesh from "@/public/images/gradients/right-mesh.png"

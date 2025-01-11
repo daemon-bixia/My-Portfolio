@@ -36,7 +36,7 @@ const Hero = () => {
       </Button>
 
       {/* Social links */}
-      <SocialLinks />
+      <SocialLinks pointer />
 
       {/* Feature cards */}
       <Feature title="80+ Froks" icon="logo-github" iconColor='purple' position={{ top: "10%", left: "8%" }}>
