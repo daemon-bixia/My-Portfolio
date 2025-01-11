@@ -1,12 +1,10 @@
-import projectsData from "@/data/projects";
-import skillsData from "@/data/skills";
-import heroData from "@/data/hero";
-
 import Contact from "@/components/portfolio/contact/contact";
-import Hero from "@/components/shared/hero/hero";
+import Hero from "@/components/portfolio/hero/hero";
 import Projects from "@/components/portfolio/projects/projects";
 import Skills from "@/components/portfolio/skills/skills";
-import HireMe from "@/components/portfolio/hire-me/hire-me";
+import Image from "next/image";
+
+import Mesh1 from "@/public/images/gradients/mesh-1.png";
 
 import styles from "./page.module.css";
 
@@ -16,22 +14,17 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <div>
-      {/* Blur Background */}
-      <div className={styles.blurBackground}></div>
+      {/* The first gradient image in the background  */}
+      <Image className={styles.mesh1} src={Mesh1} alt="a colorful mesh gradient" />
 
       {/* Hero Section */}
-      <Hero data={heroData.portfolio}>
-        <HireMe />
-      </Hero>
+      <Hero />
 
       {/* Skills Section */}
-      <Skills data={skillsData} />
+      <Skills />
 
       {/* Projects Section */}
-      <Projects id="projects" data={projectsData.development} />
-
-      {/* Designs Section */}
-      <Projects id="designs" data={projectsData.designs} />
+      <Projects />
 
       {/* Contact Section */}
       <Contact />

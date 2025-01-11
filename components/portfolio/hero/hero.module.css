@@ -1,0 +1,110 @@
+.hero {
+  position: relative;
+  padding: 8.625rem 2rem;
+
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 1rem;
+  place-items: center;
+  place-content: center;
+
+  .welcome {
+    position: relative;
+    text-align: center;
+    max-width: 41.875rem;
+
+    .rollPill {
+      position: absolute;
+      top: -0.5rem;
+      right: 0;
+      transform: translateY(-100%);
+      width: fit-content;
+      padding: 0.75rem;
+      border: 0.0625rem solid rgba(255, 255, 255, 0.8);
+      border-radius: 3.125rem;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 20%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(0, 0, 0, 0) 80%
+      );
+    }
+
+    .welcomeText {
+      line-height: auto;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+  }
+
+  .contactButton {
+    padding: 16px 32px;
+    border-radius: 100px;
+    gap: 6px;
+  }
+
+  .icon {
+    color: var(--white);
+    width: 21px;
+    height: 21px;
+  }
+
+  .pattern {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .purpleText {
+    color: var(--purple);
+  }
+
+  .orangeText {
+    color: var(--orange);
+  }
+
+  .FeatureDescription {
+    max-width: 277px;
+  }
+
+  .backgroundText {
+    color: transparent;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 0.0625rem;
+  }
+
+  .driveResults {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 21%;
+  }
+
+  .endlessInnovation {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 71%;
+  }
+}
+
+/***** Tablet *****/
+
+@media only screen and (max-width: 64rem) {
+  .hero {
+    .rollPill {
+      display: none;
+    }
+
+    .driveResults {
+      display: none;
+    }
+
+    .endlessInnovation {
+      display: none;
+    }
+  }
+}

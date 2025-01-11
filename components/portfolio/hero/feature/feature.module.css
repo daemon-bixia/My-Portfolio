@@ -1,0 +1,56 @@
+.feature {
+  position: absolute;
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 0.5rem;
+  padding: 16px;
+  border: solid 4px var(--white);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.625rem);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+
+  .iconTitleContainer {
+    display: grid;
+    grid-template-columns: min-content auto;
+    justify-content: start;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    .iconContainer {
+      display: grid;
+      place-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 32px;
+
+      &.purple {
+        background: var(--purple);
+      }
+
+      &.orange {
+        background: var(--orange);
+      }
+
+      &.pink {
+        background: var(--pink);
+      }
+    }
+
+    .icon {
+      color: var(--white);
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
+/***** Tablet *****/
+
+@media only screen and (max-width: 64rem) {
+  .feature {
+    display: none;
+  }
+}

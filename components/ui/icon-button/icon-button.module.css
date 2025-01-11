@@ -1,0 +1,19 @@
+.iconButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border: 0.0625rem solid var(--border);
+  border-radius: 2.5rem;
+  transition: background 200ms;
+}
+
+.iconButton:hover {
+  background: var(--gray-200);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: var(--gray-700);
+}

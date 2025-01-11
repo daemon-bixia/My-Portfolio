@@ -1,7 +1,7 @@
 import footerData from "@/data/footer";
 
-import Footer from "@/components/shared/footer/footer";
-import Navbar from "@/components/shared/navbar/navbar";
+import Footer from "@/components/portfolio/footer/footer";
+import Navbar from "@/components/portfolio/navbar/navbar";
 
 import "./globals.css";
 

@@ -1,160 +1,119 @@
 .projects {
-  padding: 6.25rem 2rem;
-  border-bottom: 0.0625rem solid var(--border);
-}
-
-.projects .outerGrid {
+  padding: 12.5rem 0;
   display: grid;
-  grid-template-columns: 18.75rem 1fr;
-  column-gap: 3.75rem;
-  row-gap: 3.75rem;
-  margin-bottom: 1.5rem;
-}
-
-.projects .outerGrid .description {
-  max-width: 12.625rem;
-}
-
-.projects .outerGrid .descriptionWrapper .description .header {
-  margin-bottom: 1rem;
-}
-
-.projects .outerGrid .descriptionWrapper .description .text {
-  margin-bottom: 1.5rem;
-}
-
-.projects .outerGrid .descriptionWrapper .underline {
-  width: 6.5625rem;
-  height: 0.0625rem;
-  background-color: var(--blue-200);
-}
-
-.projects .outerGrid .innerGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 1.5rem;
-  column-gap: 1.5rem;
-  place-items: end;
-}
-
-.projects .outerGrid .innerGrid .item {
-  position: relative;
-  width: auto;
-  height: 100%;
-  aspect-ratio: 288 / 205.72;
-  border: 0.0938rem solid var(--border);
-  border-radius: 0.3125rem;
-  overflow: hidden;
-}
-
-.projects .outerGrid .innerGrid .item .thumbnail {
-  width: 100%;
-  height: 100%;
-}
-
-.projects .outerGrid .innerGrid .item .overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.3125rem;
-  display: grid;
-  grid-template-rows: min-content min-content;
   place-items: center;
-  place-content: center;
-  background-color: var(--overlay);
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 1ms, opacity 800ms;
-}
+  grid-template-rows: auto auto;
+  row-gap: 5.625rem;
 
-.projects .outerGrid .innerGrid .item:hover .overlay {
-  visibility: visible;
-  opacity: 1;
-}
+  .sectionHeader {
+    padding: 0 2rem;
+    max-width: 36.3125rem;
 
-.projects .outerGrid .innerGrid .item .overlay .demoButton,
-.projectButton {
-  max-width: 9.375rem;
-  min-width: 9.375rem;
-  border-radius: 1.25rem !important;
-}
+    .title {
+      text-align: center;
+      line-height: 160%;
+    }
 
-.projects .outerGrid .innerGrid .item .overlay .demoButton {
-  margin-bottom: 0.75rem;
-}
+    .description {
+      text-align: center;
+      line-height: 160%;
+      color: var(--gray-text);
+    }
+  }
 
-.projects .outerGrid .innerGrid .item .overlay .icon svg {
-  width: 1rem;
-  height: 1rem;
-}
+  .projectsGrid {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 2.5rem;
 
-.projects .seeMoreButtonWrapper {
-  display: grid;
-  place-items: end;
-}
+    .twoProjects {
+      padding: 0 2rem;
+      display: flex;
+      gap: 2.5rem;
+    }
 
-.projects .seeMoreButtonWrapper .icon {
-  margin-left: 0.75rem;
-}
+    .ProjectWithSeeMore {
+      padding: 0 2rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      overflow: hidden;
 
-.projects .seeMoreButtonWrapper .icon svg {
-  width: 1rem;
-  height: 1rem;
-}
+      .seeMore {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        row-gap: 0.75rem;
 
-.projects .seeMoreButtonWrapper .seeMoreButton {
-  min-width: 11.25rem;
-}
+        .tools {
+          display: grid;
+          grid-auto-flow: column;
+          grid-auto-columns: min-content;
+          column-gap: 0.625rem;
 
+          .toolIcon {
+            width: 1.25rem;
+            height: 1.25rem;
+            padding: 10px;
+            border: 0.0625rem solid var(--border);
+            border-radius: 2.5rem;
+            display: grid;
+            place-items: center;
+            background: var(--white);
+          }
+        }
+
+        .titleAndDescription {
+          width: max-content;
+
+          .description {
+            width: 15rem;
+          }
+        }
+
+        .moreButton {
+          padding: 0.875rem 2.5rem;
+          width: fit-content;
+          border-radius: 100px;
+        }
+      }
+
+      .leftMesh {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .rightMesh {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
 
 /***** Tablet *****/
 
-@media only screen and (min-width: 48rem) and (max-width: 61.9375rem) {
-  .projects .outerGrid {
-    grid-template-columns: 9.375rem 1fr;
-  }
+@media only screen and (max-width: 64rem) {
+  .projectsGrid {
+    .twoProjects {
+      flex-direction: column;
+    }
 
-  .projects .outerGrid .innerGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    .ProjectWithSeeMore {
+      flex-direction: column;
 
-
-/***** Mobile *****/
-
-@media only screen and (max-width: 47.9375rem) {
-  .projects .outerGrid {
-    grid-template-columns: repeat(1, 1fr);
-    place-content: center;
-    row-gap: 3.75rem;
-    margin-bottom: 3.75rem;
-  }
-
-  .projects .outerGrid .descriptionWrapper {
-    display: grid;
-    place-items: center;
-  }
-
-  .projects .outerGrid .descriptionWrapper .underline {
-    width: 3.125rem;
-  }
-
-  .projects .outerGrid .description {
-    text-align: center;
-  }
-
-  .projects .outerGrid .innerGrid {
-    grid-template-columns: repeat(1, auto);
-    row-gap: 3.75rem;
-    place-items: center;
-  }
-
-
-  .projects .seeMoreButtonWrapper {
-    grid-template-columns: 1fr;
-    place-content: center;
-    justify-items: stretch;
+      .seeMore {
+        place-items: center;
+        text-align: center;
+      }
+    }
   }
 }

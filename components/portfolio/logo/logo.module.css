@@ -1,0 +1,13 @@
+.hideSkip {
+  position: absolute;
+  right: 625rem;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.hideLogo {
+  display: none;
+}

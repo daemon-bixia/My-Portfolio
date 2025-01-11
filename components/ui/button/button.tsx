@@ -2,16 +2,16 @@ import type { TTypographyVariants } from "@/components/ui/typography/typography"
 
 import React from "react";
 import { chooseTypography } from "@/components/ui/typography/typography";
-
 import NextLink from "next/link";
 
 import styles from "./button.module.css";
+
 
 // **** Types **** //
 
 interface IProps {
   variant?: "contained" | "outlined" | "ghost";
-  color?: "primary" | "secondary" | "gray" | "white";
+  color?: "primary" | "secondary" | "gray" | "white" | "black";
   typography?: TTypographyVariants;
   endAdornment?: React.ReactNode;
   className?: string;
@@ -32,6 +32,7 @@ const colorStyles = {
   secondary: styles.secondary,
   gray: styles.gray,
   white: styles.white,
+  black: styles.black
 };
 
 const variantStyles = {
@@ -46,7 +47,7 @@ const variantStyles = {
 const Button = ({
   variant = "contained",
   color = "primary",
-  typography = "heading-7",
+  typography = "heading-1",
   endAdornment,
   className,
   children,

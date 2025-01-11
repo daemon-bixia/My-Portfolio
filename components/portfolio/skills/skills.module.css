@@ -1,98 +1,215 @@
-.outerGrid {
-  padding: 6.25rem 2rem;
+.skills {
+  position: relative;
+  margin-top: 10.3125rem;
+  padding: 9.375rem 2rem;
   display: grid;
-  grid-template-columns: 18.75rem 1fr;
-  column-gap: 3.75rem;
-  border-bottom: 0.0625rem solid var(--border);
-}
+  place-items: center;
+  grid-template-rows: auto auto;
+  row-gap: 5.625rem;
 
-.outerGrid .description {
-  max-width: 12.625rem;
-}
+  .sectionHeader {
+    position: relative;
+    max-width: 36.3125rem;
 
-.outerGrid .descriptionWrapper .description .header {
-  margin-bottom: 1rem;
-}
+    .sparkles {
+      position: absolute;
+      right: 0;
+      top: -20px;
+    }
 
-.outerGrid .descriptionWrapper .description .text {
-  margin-bottom: 1.5rem;
-}
+    .title {
+      text-align: center;
+      line-height: 160%;
+    }
 
-.outerGrid .descriptionWrapper .underline {
-  width: 6.5625rem;
-  height: 0.0625rem;
-  background-color: var(--blue-200);
-}
-
-.outerGrid .innerGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 3.75rem;
-  column-gap: 3.75rem;
-}
-
-.outerGrid .innerGrid .item {
-  width: 100%;
-}
-
-.outerGrid .innerGrid .item .icon {
-  color: var(--blue-200);
-  margin-bottom: 2rem;
-  width: auto !important; 
-}
-
-.outerGrid .innerGrid .item .icon svg {
-  width: 1.875rem;
-  height: 1.875rem;
-}
-
-.outerGrid .innerGrid .item .name {
-  margin-bottom: 1rem;
-}
-
-
-/***** Tablet *****/
-
-@media only screen and (min-width: 48rem) and (max-width: 61.9375rem) {
-  .outerGrid {
-    grid-template-columns: 9.375rem 1fr;
+    .description {
+      text-align: center;
+      line-height: 160%;
+      color: var(--gray-text);
+    }
   }
 
-  .outerGrid .innerGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .skillGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.125rem;
+    justify-content: stretch;
+
+    .leftGrid,
+    .rightGrid {
+      display: grid;
+      grid-template-rows: min-content min-content;
+      row-gap: 5rem;
+
+      .image {
+        box-sizing: border-box;
+        padding: 1rem;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        color: var(--gray-600);
+        text-decoration: none;
+
+        .OpenIndicator {
+          width: fit-content;
+          height: fit-content;
+          padding: 1rem;
+          border: 0.0625rem solid var(--border);
+          display: inline-grid;
+          justify-self: end;
+          border-radius: 100%;
+          background: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(30px);
+          box-shadow: var(--shadow-1);
+
+          .icon {
+            color: var(--gray-600);
+          }
+        }
+
+        .linkInfo {
+          width: fit-content;
+          height: fit-content;
+          padding: 1rem;
+          border: 1px solid var(--border);
+          border-radius: 1rem;
+          align-self: end;
+          display: grid;
+          grid-template-rows: auto auto;
+          background: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(30px);
+          box-shadow: var(--shadow-1);
+        }
+      }
+
+      .skillList {
+        display: grid;
+        grid-template-rows: auto auto;
+        row-gap: 1.5rem;
+
+        .skillItem:not(:last-child) {
+          padding-bottom: 0.75rem;
+          border-bottom: 0.0625rem solid var(--border);
+        }
+
+        .skillItem {
+          .number {
+            color: var(--blue-300);
+          }
+
+          .description {
+            color: var(--gray-text);
+          }
+        }
+      }
+    }
+
+    .leftGrid {
+      .image {
+        width: auto;
+        height: 100%;
+        aspect-ratio: 580/ 603;
+        border-radius: 2rem;
+        border: 0.0625rem solid var(--border);
+        overflow: hidden;
+      }
+    }
+
+    .rightGrid {
+      .booksMockup {
+        width: auto;
+        aspect-ratio: 582/666;
+        display: grid;
+        grid-template-rows: 1fr 25%;
+        border-radius: 2rem;
+        border: 0.0625rem solid var(--border);
+        overflow: hidden;
+
+        .colors {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+
+          .colorPalette {
+            display: grid;
+            grid-template-rows: 1fr min-content;
+            padding: 0.75rem 1rem;
+            color: var(--white);
+
+            .name {
+              font-weight: 400;
+            }
+
+            .hexValue,
+            .rgbValue {
+              font-weight: 900;
+            }
+          }
+
+          .colorPalette:nth-child(1) {
+            background: var(--magic-pink);
+          }
+
+          .colorPalette:nth-child(2) {
+            background: var(--energy-blue);
+          }
+
+          .colorPalette:nth-child(3) {
+            background: var(--marine-purple);
+          }
+        }
+      }
+    }
+  }
+
+  .mesh2 {
+    width: 100%;
+    height: max-content;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
   }
 }
-
 
 /***** Mobile *****/
 
 @media only screen and (max-width: 47.9375rem) {
-  .outerGrid {
-    grid-template-columns: repeat(1, 1fr);
-    place-items: center;
-    place-content: center;
-    row-gap: 3.75rem;
-  }
+  .skills {
+    .sectionHeader {
+      .sparkles {
+        position: absolute;
+        right: 80px;
+        top: -60px;
+      }
+    }
 
-  .outerGrid .descriptionWrapper {
-    display: grid;
-    place-items: center;
-  }
+    .skillGrid {
+      grid-template-columns: 1fr;
+      row-gap: 6.25rem;
 
-  .outerGrid .descriptionWrapper .underline {
-    width: 3.125rem;
-  }
+      .rightGrid {
+        row-gap: 2rem;
 
-  .outerGrid .description {
-    text-align: center;
-  }
+        .skillList {
+          order: 1;
+        }
+      }
 
-  .outerGrid .innerGrid {
-    grid-template-columns: repeat(1, auto);
-  }
+      .leftGrid {
+        row-gap: 2rem;
 
-  .outerGrid .innerGrid .item {
-    text-align: center;
-    max-width: 15.625rem;
+        .skillList {
+          order: 1;
+        }
+      }
+    }
+
+    .mesh2 {
+      height: 100vh;
+      left: 0;
+      bottom: 50px;
+    }
   }
 }
