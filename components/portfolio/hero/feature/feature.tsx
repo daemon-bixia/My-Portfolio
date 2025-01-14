@@ -14,26 +14,15 @@ interface IProps {
   iconColor: string;
   title: string;
   children: React.ReactNode;
-  position: {
-    left?: string;
-    right?: string;
-    top?: string;
-    bottom?: string;
-  }
+  className: string;
 }
 
 
 // **** Component **** //
 
-const Feature = ({ title, icon, iconColor, position, children }: IProps) => {
+const Feature = ({ title, icon, iconColor, className, children }: IProps) => {
   return (
-    <div
-      className={styles.feature}
-      style={{
-        left: position.left, right: position.right,
-        top: position.top, bottom: position.bottom
-      }}
-    >
+    <div className={`${styles.feature} ${className}`}>
       <div className={styles.iconTitleContainer}>
         <div className={`${styles.iconContainer} ${styles[iconColor]}`}>
           <IonIcon name={icon} className={styles.icon} />

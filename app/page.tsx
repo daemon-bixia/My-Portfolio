@@ -1,3 +1,9 @@
+"use client"
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+
 import Contact from "@/components/portfolio/contact/contact";
 import Hero from "@/components/portfolio/hero/hero";
 import Projects from "@/components/portfolio/projects/projects";
@@ -7,6 +13,11 @@ import Image from "next/image";
 import Mesh1 from "@/public/images/gradients/mesh-1.png";
 
 import styles from "./page.module.css";
+
+
+// **** Register Plugins **** //
+
+gsap.registerPlugin(useGSAP, ScrollTrigger, MotionPathPlugin);
 
 
 // **** Component **** //

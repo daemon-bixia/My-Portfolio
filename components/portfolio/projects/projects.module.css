@@ -4,6 +4,7 @@
   place-items: center;
   grid-template-rows: auto auto;
   row-gap: 5.625rem;
+  opacity: 0;
 
   .sectionHeader {
     padding: 0 2rem;
@@ -44,6 +45,7 @@
         display: grid;
         grid-template-rows: repeat(3, auto);
         row-gap: 0.75rem;
+        opacity: 0;
 
         .tools {
           display: grid;

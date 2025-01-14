@@ -19,11 +19,10 @@ export const metadata = {
 }
 
 
+
 // **** Component **** //
 
-const RootLayout = ({
-  children,
-}: IProps) => {
+const RootLayout = ({ children }: IProps) => {
   return (
     <html lang="en">
       <body>

@@ -48,7 +48,8 @@
       .arrowLeft {
         display: block;
         position: absolute;
-        right: -60px;
+        right: -3.4375rem;
+        top: 0.3125rem;
       }
 
       .arrowDown {

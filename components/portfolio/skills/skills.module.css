@@ -6,6 +6,7 @@
   place-items: center;
   grid-template-rows: auto auto;
   row-gap: 5.625rem;
+  opacity: 0;
 
   .sectionHeader {
     position: relative;

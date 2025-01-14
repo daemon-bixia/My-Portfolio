@@ -1,7 +1,7 @@
 import IconButton from "@/components/ui/icon-button/icon-button";
 import Image from "next/image";
-import ArrowLeft from "@/public/vectors/decorations/arrow-left.svg";
-import ArrowDown from "@/public/vectors/decorations/arrow-down.svg";
+import ArrowLeft from "@/components/vectors/arrow-left";
+import ArrowDown from "@/components/vectors/arrow-down";
 
 import Typography from "@/components/ui/typography/typography";
 import React from "react";
@@ -16,29 +16,30 @@ import styles from "./social-links.module.css"
 interface IProps {
   pointer?: boolean;
   className?: string;
+  pointerSelector?: string;
+  letsConnect?: string;
 }
 
 
 // **** Component **** //
 
-const SocialLinks = ({ pointer, className }: IProps) => {
+const SocialLinks = ({ pointer, pointerSelector, letsConnect, className }: IProps) => {
   return (
     <React.Fragment>
       <div className={`${styles.socialLinks} ${className}`}>
 
-        {/* pointer */}
         {
           pointer
-            ? (<div className={styles.pointer}>
-              <Typography className={styles.letsConnect} variant="body-3">Let's connect</Typography>
-              <Image className={styles.arrowDown} src={ArrowDown} alt="Arrow pointing to social links" />
-              <Image className={styles.arrowLeft} src={ArrowLeft} alt="Arrow pointing to social links" />
+            ? (<div className={`${styles.pointer} ${pointerSelector}`}>
+              <Typography className={`${styles.letsConnect} ${letsConnect}`} variant="body-3">Let's connect</Typography>
+              <ArrowDown className={styles.arrowDown} />
+              <ArrowLeft className={styles.arrowLeft} />
             </div>)
             : (<></>)
         }
 
-        {socialLinks.map((link) => (
-          <IconButton icon={link[0]} href={link[1]} blank />
+        {socialLinks.map((link, index) => (
+          <IconButton icon={link[0]} href={link[1]} blank key={index} />
         ))}
       </div>
     </React.Fragment>

@@ -1,10 +1,13 @@
 "use client"
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import Sparkle from "@/components/vectors/sparkle"
 import Typography from "@/components/ui/typography/typography";
 import IonIcon from "@reacticons/ionicons";
 import Image from "next/image";
 
-import Sparkle from "@/public/vectors/decorations/sparkle.svg"
 import Projects from "@/public/images/skills/projects.png";
 import Books from "@/public/images/skills/books.png";
 import Mesh2 from "@/public/images/gradients/mesh-2.png";
@@ -15,10 +18,27 @@ import styles from "./skills.module.css";
 // **** Component **** //
 
 const Skills = () => {
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: `.${styles.skills}`,
+        start: "top center"
+      },
+    });
+
+    tl.fromTo(`.${styles.skills}`, { y: 200, }, { y: 0, opacity: 1, duration: 1, });
+    tl.fromTo(`.${styles.sparkles} path`, { transformOrigin: 'center', transform: 'scale(0.7)' }, { transform: 'scale(1)', duration: 0.7, }, 0.5);
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    }
+  });
+
   return (
-    <section id="skills" className={styles.skills}>
+    <section id="skills" className={styles.skills} >
       <header className={styles.sectionHeader}>
-        <Image className={styles.sparkles} src={Sparkle} alt="vectors illustration of sparkles" />
+        <Sparkle className={styles.sparkles} />
         <Typography className={styles.title} variant='display-1'>What <span className="colorful-text">I Bring</span> to the table</Typography>
         <Typography className={styles.description} variant='body-2'>A versatile skillset focused on delivering innovative and impactful solutions.</Typography>
       </header>

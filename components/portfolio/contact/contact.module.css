@@ -5,6 +5,7 @@
   place-items: center;
   grid-template-rows: auto auto;
   row-gap: 5.625rem;
+  opacity: 0;
 
   .sectionHeader {
     position: relative;
@@ -13,8 +14,8 @@
 
     .plane {
       position: absolute;
-      right: 1rem;
-      top: -2.5rem;
+      right: 0rem;
+      top: -3.5rem;
     }
 
     .description {
@@ -36,7 +37,7 @@
 
     .sectionHeader {
       .plane {
-        top: -70px;
+        top: -100px;
       }
     }
 

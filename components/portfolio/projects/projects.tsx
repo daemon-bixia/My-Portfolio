@@ -1,6 +1,6 @@
 "use client"
-
-import React from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 import Typography from "@/components/ui/typography/typography";
 import Project from "@/components/portfolio/projects/project/project";
@@ -36,6 +36,19 @@ import styles from "./projects.module.css";
 // **** Component **** //
 
 const Projects = () => {
+  useGSAP(() => {
+    // slide up and fade in
+    const sectionTl = gsap.timeline({ scrollTrigger: { trigger: `.${styles.projects}`, start: "top center" } });
+    sectionTl.fromTo(`.${styles.projects}`, { y: 200, duration: 1 }, { y: 0, opacity: 1, duration: 1 });
+
+    // slide right and fade in
+    const seeMoreTl1 = gsap.timeline({ scrollTrigger: { trigger: `.${styles.ProjectWithSeeMore}:nth-child(2)`, start: "top center" } });
+    seeMoreTl1.fromTo(`.${styles.ProjectWithSeeMore}:nth-child(2) .${styles.seeMore}`, { x: -50 }, { x: 0, opacity: 1, duration: 0.7 });
+
+    // slide left and fade in
+    const seeMoreTl2 = gsap.timeline({ scrollTrigger: { trigger: `.${styles.ProjectWithSeeMore}:nth-child(4)`, start: "top center" } });
+    seeMoreTl2.fromTo(`.${styles.ProjectWithSeeMore}:nth-child(4) .${styles.seeMore}`, { x: 50 }, { x: 0, opacity: 1, duration: 0.7 });
+  });
 
   return (
     <section id="projects" className={styles.projects}>
