@@ -193,6 +193,13 @@
         .skillList {
           order: 1;
         }
+
+        .booksMockup {
+          grid-template-rows: 1fr;
+          .colors {
+            display: none;
+          }
+        }
       }
 
       .leftGrid {
