@@ -178,6 +178,9 @@
         right: 80px;
         top: -60px;
       }
+      .title {
+        font: var(--display-2);
+      }
     }
 
     .skillGrid {

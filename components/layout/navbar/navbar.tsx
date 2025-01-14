@@ -117,7 +117,7 @@ const Navbar = () => {
         </div>
 
         <div className={styles.buttonWrapper}>
-          <Button className={styles.supportButton} variant="outlined" color="gray" typography="heading-1" href="/#supportMe">
+          <Button className={styles.supportButton} variant="outlined" color="gray" typography="heading-1" href="https://PayPal.Me/demonbixia" target="_blank">
             Support
           </Button>
 

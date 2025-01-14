@@ -105,6 +105,12 @@
 
 @media only screen and (max-width: 64rem) {
   .projectsGrid {
+    .sectionHeader {
+      .title {
+        font: var(--display-2);
+      }
+    }
+
     .twoProjects {
       flex-direction: column;
     }

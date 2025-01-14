@@ -95,7 +95,9 @@ const Projects = () => {
               typography='body-2'
               variant="outlined"
               color="gray"
-              endAdornment={<IonIcon name="open-outline" />}>
+              endAdornment={<IonIcon name="open-outline" />}
+              href="https://github.com/demon-bixia"
+              target="_blank">
               Github
             </Button>
           </div>
@@ -154,7 +156,9 @@ const Projects = () => {
               typography='body-2'
               variant="outlined"
               color="gray"
-              endAdornment={<IonIcon name="open-outline" />}>
+              endAdornment={<IonIcon name="open-outline" />}
+              href="https://dribbble.com/demon-bixia"
+              target="_blank">
               Dribbble
             </Button>
           </div>

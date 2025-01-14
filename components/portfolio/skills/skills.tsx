@@ -18,7 +18,6 @@ import styles from "./skills.module.css";
 // **** Component **** //
 
 const Skills = () => {
-
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {

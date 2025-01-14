@@ -119,8 +119,16 @@
 
 @media only screen and (max-width: 64rem) {
   .hero {
+    padding: 3.75rem 2rem;
+    height: calc(100vh - 200px);
     .rollPill {
       display: none;
+    }
+
+    .welcomeText {
+      line-height: auto;
+      opacity: 0;
+      font: var(--display-2);
     }
 
     .driveResults {
@@ -129,6 +137,10 @@
 
     .endlessInnovation {
       display: none;
+    }
+
+    .contactButton {
+      margin-bottom: 6.25rem;
     }
   }
 }

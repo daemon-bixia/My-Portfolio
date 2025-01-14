@@ -39,6 +39,9 @@
       .plane {
         top: -100px;
       }
+      .title {
+        font: var(--display-2);
+      }
     }
 
     .socialLinks {
