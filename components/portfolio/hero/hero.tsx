@@ -39,7 +39,9 @@ const Hero = () => {
       { background: `linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.6) 0%, rgba(0, 0, 0, 0) 40%)`, duration: 0.4, },
       { background: `linear-gradient(90deg, rgba(0, 0, 0, 0) 70%, rgba(255, 255, 255, 0.6) 150%, rgba(0, 0, 0, 0) 100%)`, repeat: -1, repeatDelay: 3, duration: 0.4, },
     );
-    tl.fromTo(`.${styles.feature}`, { y: 20 }, { y: 0, opacity: 1, duration: 1 });
+    tl.to(`.${styles.driveResults}`, { opacity: 1, duration: 1 });
+    tl.to(`.${styles.endlessInnovation}`, { opacity: 1, duration: 1 }, "<0");
+    tl.fromTo(`.${styles.feature}`, { y: 20 }, { y: 0, opacity: 1, duration: 1 }, "<0");
     tl.to(`.${styles.feature1}`, { y: 6, yoyo: true, repeat: -1, opacity: 1, duration: 3, repeatDelay: 0.1 });
     tl.to(`.${styles.feature2}`, { y: 6, yoyo: true, repeat: -1, opacity: 1, duration: 3, repeatDelay: 0.2 });
     tl.to(`.${styles.feature3}`, { y: 6, yoyo: true, repeat: -1, opacity: 1, duration: 3, repeatDelay: 0.3 });
