@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding: 8.625rem 2rem;
+  height: calc(100vh - 83px);
   display: grid;
   grid-template-rows: repeat(2, auto);
   row-gap: 1rem;
